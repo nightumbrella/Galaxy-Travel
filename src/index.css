@@ -1,0 +1,52 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Gruppo:regular);
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  @apply bg-black text-white;
+}
+.rocket {
+  bottom: -30px;
+}
+.rocket__hero:hover .rocket {
+  transition: 1s ease;
+  bottom: 50px;
+}
+.card-front,
+.card-back {
+  /* background: rgb(45, 102, 129); */
+  background: linear-gradient(
+    350deg,
+    rgb(10, 39, 53) 0%,
+    rgb(11, 22, 43) 100%
+  );
+  backface-visibility: hidden;
+}
+.card-front{
+  background-image: url("./assets/be8d5c34ca2ed78a29ac8d2b2bc0f6a9.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.card-back{
+  transform: rotateY(180deg);
+}
+.card{
+  transform-style: preserve-3d;
+  transition: transform 1s ease;
+  /* transform: rotateY(180deg); */
+
+}
+.hero:hover .card{
+  transform: rotateY(180deg);
+}
+
+
